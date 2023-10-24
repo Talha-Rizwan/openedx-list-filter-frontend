@@ -1,4 +1,4 @@
-export TRANSIFEX_RESOURCE = frontend-template-application
+export TRANSIFEX_RESOURCE = openedx-list-filter-frontend
 transifex_langs = "ar,fr,es_419,zh_CN"
 
 intl_imports = ./node_modules/.bin/intl-imports.js
@@ -57,7 +57,7 @@ pull_translations:
 	            translations/paragon/src/i18n/messages:paragon \
 	            translations/frontend-component-footer/src/i18n/messages:frontend-component-footer \
 	            translations/frontend-component-header/src/i18n/messages:frontend-component-header \
-	            translations/frontend-template-application/src/i18n/messages:frontend-template-application
+	            translations/openedx-list-filter-frontend/src/i18n/messages:openedx-list-filter-frontend
 
-	$(intl_imports) paragon frontend-component-header frontend-component-footer frontend-template-application
+	$(intl_imports) paragon frontend-component-header frontend-component-footer openedx-list-filter-frontend
 endif
