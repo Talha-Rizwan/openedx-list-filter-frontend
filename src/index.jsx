@@ -10,15 +10,14 @@ import ReactDOM from 'react-dom';
 import Header from '@edx/frontend-component-header';
 import Footer from '@edx/frontend-component-footer';
 import messages from './i18n';
-import ExamplePage from './example/ExamplePage';
-
+import CoursesList from './courses_list/Courses_list';
 import './index.scss';
 
 subscribe(APP_READY, () => {
   ReactDOM.render(
     <AppProvider>
       <Header />
-      <ExamplePage />
+      <CoursesList />
       <Footer />
     </AppProvider>,
     document.getElementById('root'),
