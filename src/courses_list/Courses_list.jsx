@@ -3,7 +3,7 @@ import {
 } from '@edx/paragon';
 import { useState, useEffect } from 'react';
 import { getConfig } from '@edx/frontend-platform';
-import { fetchCourses } from './data/fetchCourses';
+import getCourses from './data/fetchCourses';
 
 const CoursesList = () => {
   const [loading, setLoading] = useState('idle');
@@ -14,7 +14,7 @@ const CoursesList = () => {
   useEffect(() => {
     (async () => {
       setLoading('pending');
-      const coursesData = await fetchCourses();
+      const coursesData = await getCourses();
       if (coursesData.error) {
         console.log(coursesData.error);
         setLoading('error');

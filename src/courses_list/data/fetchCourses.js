@@ -1,7 +1,7 @@
 import { getConfig } from '@edx/frontend-platform';
 import { getAuthenticatedHttpClient } from '@edx/frontend-platform/auth';
 
-const fetchCourses = () => {
+const getCourses = () => {
   const client = getAuthenticatedHttpClient();
   return client.get(`${getConfig().LMS_BASE_URL}/api/list_and_filter/v1/list/`)
     .then(res => res.data)
@@ -9,4 +9,4 @@ const fetchCourses = () => {
 };
 
 // eslint-disable-next-line import/prefer-default-export
-export { fetchCourses };
+export default getCourses;
